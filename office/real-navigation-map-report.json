@@ -1,0 +1,10 @@
+{
+  "pcd_obstacle_cells_added": 1476,
+  "door_xy_m": [
+    2.75,
+    -2.575
+  ],
+  "door_clearance_m": 0.6123258632943596,
+  "floor_m": -1.2601173454149428,
+  "scope": "offline map fusion; no robot commands"
+}

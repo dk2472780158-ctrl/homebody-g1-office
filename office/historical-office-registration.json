@@ -1,0 +1,95 @@
+{
+  "scope": "offline rigid alignment of user-provided PCD; no robot connection",
+  "source": "input/g1_fastlio.pcd",
+  "target": "input/test.pcd",
+  "source_sha256": "c175d0d3bc704af57fedd8ac0460592ac5b3d04d07127d5f13483e854bea25f5",
+  "target_sha256": "f096d860ed47322c5e4aa647247ecefe20beb57145709176fc031ce9b4cbc8bb",
+  "direction": "office_map_point = R @ provided_pcd_point + t; column vectors, metres",
+  "T_office_map_from_provided_pcd": [
+    [
+      0.9983448561992925,
+      0.05748611389995412,
+      0.001701413852474091,
+      -2.6113197414428138
+    ],
+    [
+      -0.05749211401444192,
+      0.9983390401682698,
+      0.0037172169768209507,
+      -1.202835349517534
+    ],
+    [
+      -0.0014848995138876013,
+      -0.0038088823273780903,
+      0.9999916437095103,
+      -0.010528382989343303
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "translation_m": [
+    -2.6113197414428138,
+    -1.202835349517534,
+    -0.010528382989343303
+  ],
+  "roll_pitch_yaw_degrees": [
+    -0.21823365029205677,
+    0.08507850641211251,
+    -3.295876494342508
+  ],
+  "initial_global_se2": [
+    -2.6062764056124363,
+    -1.1967651407789295,
+    -0.05991344516289443
+  ],
+  "training": {
+    "points": 8496,
+    "mean_clipped_at_0_65m": 0.07515924402118512,
+    "median_nearest_neighbor_m": 0.04485827461971249,
+    "within_0_2m_fraction": 0.9342043314500942,
+    "within_0_4m_fraction": 0.96939736346516,
+    "pgm_occupied_within_0_2m_fraction": 0.9519774011299436,
+    "pgm_inside_fraction": 1.0
+  },
+  "held_out_points": {
+    "points": 8496,
+    "mean_clipped_at_0_65m": 0.07699697958413597,
+    "median_nearest_neighbor_m": 0.044807450226855894,
+    "within_0_2m_fraction": 0.9289077212806026,
+    "within_0_4m_fraction": 0.9683380414312618,
+    "pgm_occupied_within_0_2m_fraction": 0.9499764595103578,
+    "pgm_inside_fraction": 1.0
+  },
+  "all_structural_points": {
+    "points": 16992,
+    "mean_clipped_at_0_65m": 0.07607811180266054,
+    "median_nearest_neighbor_m": 0.04482395101468453,
+    "within_0_2m_fraction": 0.9315560263653484,
+    "within_0_4m_fraction": 0.968867702448211,
+    "pgm_occupied_within_0_2m_fraction": 0.9509769303201506,
+    "pgm_inside_fraction": 1.0
+  },
+  "iterations": 45,
+  "provided_pcd_origin_pgm_col_row": [
+    136.2736051711437,
+    95.55670699035068
+  ],
+  "localization_validated": false,
+  "navigation_ready": false,
+  "limitations": [
+    "PCD has no ROS frame_id or trajectory: source frame cannot be asserted to be the current camera_init",
+    "Held-out points come from the same PCD, not a separate capture or pose ground truth",
+    "No robot current pose or sensor-to-base calibration was provided",
+    "Origin marker is the provided file coordinate origin, not a confirmed current robot position",
+    "PGM comparison is a consistency check; map origin/resolution follow the provided YAML"
+  ],
+  "artifacts": [
+    "g1_fastlio_in_office_map.pcd",
+    "T_office_map_from_provided_pcd.txt",
+    "overlay.png"
+  ]
+}

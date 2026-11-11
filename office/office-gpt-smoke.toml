@@ -1,0 +1,3 @@
+[agent]
+max_steps = 1
+timeout = 90.0

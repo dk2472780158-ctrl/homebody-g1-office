@@ -1,0 +1,62 @@
+/**:
+  ros__parameters:
+    feature_extract_enable: false
+    point_filter_num: 3
+    max_iteration: 3
+    filter_size_surf: 0.5
+    filter_size_map: 0.5
+    cube_side_length: 1000.0
+    runtime_pos_log_enable: false
+    map_file_path: "src/map/g1_fastlio.pcd"
+
+    common:
+      # Confirmed live on G1 over CycloneDDS.
+      lid_topic: "/g1_fastlio/cloud_livox_mid360_upright"
+      # Unitree publishes this IMU with an empty frame_id and acceleration in g.
+      # g1_fastlio_bridge rotates it upright and republishes it in m/s^2.
+      imu_topic: "/g1_fastlio/imu_livox_mid360_upright"
+      time_sync_en: false
+      time_offset_lidar_to_imu: 0.0
+
+    preprocess:
+      # /utlidar/cloud_livox_mid360 already carries ring:uint16 + time:float32.
+      # The bridge's generic PointCloud2 path only flips y/z, so time keeps the
+      # Livox native unit: nanoseconds (5000 ns/point, ~1.0032e8 per 10 Hz scan).
+      # lidar_type=2 reads ring + time; timestamp_unit must be NS (3). With SEC
+      # (0) lidar_end_time lands ~1e8 s in the future and sync_packages() never
+      # returns, so no odometry or camera_init TF is ever published.
+      lidar_type: 2
+      scan_line: 4
+      blind: 0.5
+      timestamp_unit: 3
+      scan_rate: 10
+
+    mapping:
+      acc_cov: 0.1
+      gyr_cov: 0.1
+      b_acc_cov: 0.0001
+      b_gyr_cov: 0.0001
+      fov_degree: 360.0
+      det_range: 100.0
+      # LiDAR and IMU are both from the Mid360 and share directions per Livox manual.
+      # Keep this false unless you replace the IMU or calibrate a different extrinsic.
+      extrinsic_est_en: false
+      # FAST-LIO defines LiDAR pose in IMU body frame. The G1 bridge rotates
+      # LiDAR and IMU by 180 deg roll into an upright virtual body frame, so
+      # the standard Mid360 translation is rotated by the same transform.
+      extrinsic_T: [ -0.011, 0.02329, -0.04412 ]
+      extrinsic_R: [ 1.0, 0.0, 0.0,
+                     0.0, 1.0, 0.0,
+                     0.0, 0.0, 1.0 ]
+
+    publish:
+      path_en: true
+      effect_map_en: false
+      map_en: true
+      scan_publish_en: true
+      dense_publish_en: false
+      scan_bodyframe_pub_en: true
+
+    pcd_save:
+      pcd_save_en: true
+      interval: -1

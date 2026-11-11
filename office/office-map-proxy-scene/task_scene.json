@@ -1,0 +1,16 @@
+{
+  "name": "Office occupancy proxy (not surveyed for robot safety)",
+  "frame": "map",
+  "robot_start": [
+    -0.07499999999999929,
+    -1.174999999999999,
+    0.0
+  ],
+  "smoke_goal_xy": [
+    0.7250000000000008,
+    -1.174999999999999
+  ],
+  "movable_entities": [],
+  "collision_boxes": [],
+  "default_task": "Metric offline navigation test only; room labels unknown."
+}

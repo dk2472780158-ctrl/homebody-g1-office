@@ -1,0 +1,19 @@
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.mp4 binary
+*.STL binary
+*.stl binary
+*.npz binary
+*.pcd binary
+*.pgm binary
+*.glb binary
+*.mcap binary
+*.safetensors binary
+*.pt binary
+*.onnx binary
+*.rrd binary
+*.pdf binary
+*.pptx binary

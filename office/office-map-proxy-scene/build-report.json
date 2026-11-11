@@ -1,0 +1,23 @@
+{
+  "source_map_sha256": "0466fd0326a70364b0fc78a4b314d865ecccd6657e36ae82b86ad74a1f970574",
+  "map_shape": [
+    214,
+    407
+  ],
+  "resolution_m": 0.05,
+  "original_occupied_cells": 6320,
+  "unknown_cells": 0,
+  "simulation_occupied_cells": 7551,
+  "collision_rectangles": 1245,
+  "test_start_xy_m": [
+    -0.07499999999999929,
+    -1.174999999999999
+  ],
+  "test_goal_xy_m": [
+    0.7250000000000008,
+    -1.174999999999999
+  ],
+  "minimum_route_clearance_m": 2.200568108466539,
+  "virtual_perimeter": true,
+  "robot_start_and_room_labels_surveyed": false
+}

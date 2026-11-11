@@ -1,0 +1,9 @@
+{
+  "coordinate_frame": {
+    "name": "map",
+    "units": "metres",
+    "up_axis": "Z",
+    "handedness": "right"
+  },
+  "entities": []
+}

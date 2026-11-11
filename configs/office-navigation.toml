@@ -1,0 +1,6 @@
+# Navigation only. Network and live camera must be set from measured hardware.
+[hands]
+enabled = false
+
+[exploration]
+task = "Navigate the accessible parts of this office according to the operator goal."

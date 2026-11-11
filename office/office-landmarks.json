@@ -1,0 +1,81 @@
+{
+  "landmarks": {
+    "桌子1": {
+      "anchor_xy_m": [
+        -2.0249999999999986,
+        1.1750000000000007
+      ],
+      "approach_xy_m": [
+        -2.3749999999999982,
+        -0.17499999999999893
+      ],
+      "anchor_cell_col_row": [
+        148,
+        48
+      ],
+      "approach_cell_col_row": [
+        141,
+        75
+      ],
+      "approach_static_clearance_m": 0.6373258632943581
+    },
+    "桌子2": {
+      "anchor_xy_m": [
+        0.5750000000000011,
+        1.1750000000000007
+      ],
+      "approach_xy_m": [
+        0.5750000000000011,
+        -0.3249999999999993
+      ],
+      "anchor_cell_col_row": [
+        200,
+        48
+      ],
+      "approach_cell_col_row": [
+        200,
+        78
+      ],
+      "approach_static_clearance_m": 0.6717514421272202
+    },
+    "架子": {
+      "anchor_xy_m": [
+        3.025000000000002,
+        0.725000000000001
+      ],
+      "approach_xy_m": [
+        2.1250000000000018,
+        0.5750000000000011
+      ],
+      "anchor_cell_col_row": [
+        249,
+        57
+      ],
+      "approach_cell_col_row": [
+        231,
+        60
+      ],
+      "approach_static_clearance_m": 0.6165649014609376
+    },
+    "窗口": {
+      "anchor_xy_m": [
+        -4.874999999999999,
+        -2.924999999999999
+      ],
+      "approach_xy_m": [
+        -3.9749999999999988,
+        -2.124999999999999
+      ],
+      "anchor_cell_col_row": [
+        91,
+        130
+      ],
+      "approach_cell_col_row": [
+        109,
+        114
+      ],
+      "approach_static_clearance_m": 0.6165649014609376
+    }
+  },
+  "source": "operator corrected: table1 north left; table2 separate northeast PCD structure left of shelf; west obstacle unnamed; shelf/window/door unchanged; free-space approach points"
+}

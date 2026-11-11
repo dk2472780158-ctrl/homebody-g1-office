@@ -1,0 +1,19 @@
+services:
+  sensors:
+    build:
+      context: ..
+      dockerfile: deploy/sensors.Dockerfile
+    container_name: homebody-office-sensors
+    network_mode: host
+    shm_size: 256mb
+    init: true
+    restart: unless-stopped
+    environment:
+      HB_CONFIG: /repo/config/env.sh
+      HB_REPO_ROOT: /repo
+      HB_OFFICE_ROOT: /repo/office
+      HB_ROSBRIDGE_SOURCE: ${HB_ROSBRIDGE_SOURCE:-ws://127.0.0.1:19090}
+      PYTHONDONTWRITEBYTECODE: "1"
+    volumes:
+      - ..:/repo:ro
+      - ../office/sensors:/workspace

@@ -1,0 +1,47 @@
+{
+  "upstream_homebody": {
+    "url": "https://github.com/Stanford-TML/homebody",
+    "revision": "2388aa44c875bb0c2ce4603dd557bf3918b7a1a1"
+  },
+  "sensor_source": {
+    "url": "https://gitea.databall.tech/databall-official/git_slam",
+    "revision_prefix": "adcff016",
+    "note": "Includes deployed ROS 2 adaptations; see package-level licenses."
+  },
+  "navigation_reference": "https://gitea.databall.tech/databall-official/g1_nav2",
+  "modified_for_portability": [
+    "office/build-real-navigation-map.py",
+    "office/configure-office.py",
+    "office/g1-readonly-viewer.py",
+    "office/g1_real_control.py",
+    "office/historical-office-registration.json",
+    "office/homebody-office-gpt.sh",
+    "office/office-agent-console.py",
+    "office/office-agent-run.sh",
+    "office/office-click-viewer.py",
+    "office/office-sim-directions.py",
+    "office/office-sim-viewer.py",
+    "office/office_live_panel.py",
+    "office/office_real_workflow.py",
+    "office/remove-west-obstacle-20261110.py",
+    "office/start-g1-readonly-viewer.sh",
+    "office/start-office-agent.sh",
+    "office/start-office-click-sim.sh",
+    "office/stop-office-agent.sh",
+    "office/stop-office-click-sim.sh",
+    "office/validate-historical-office-map.py",
+    "office/validate-map-candidate.py",
+    "office/sensors/build-readonly-slam.sh",
+    "office/sensors/capture_registered_cloud.sh",
+    "office/sensors/probe_sensor_continuity.py",
+    "office/sensors/run-readonly-slam.sh",
+    "office/sensors/run-wifi-live-readonly.sh",
+    "office/sensors/run-wifi-localization-bounded.sh",
+    "office/sensors/amcl/README.zh.md",
+    "office/sensors/amcl/run.sh",
+    "office/sensors/amcl/service.py",
+    "office/sensors/amcl/stop.py"
+  ],
+  "robot_service_source": "Local integration reference; the current robot host was unavailable during publication.",
+  "capture": "Read-only export of active framework, office and sensor source; runtime logs and credentials excluded."
+}
